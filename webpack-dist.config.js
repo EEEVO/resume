@@ -96,7 +96,7 @@ module.exports = {
     }),
     new EndWebpackPlugin(async () => {
       // 自定义域名
-      fs.writeFileSync(path.resolve(outputPath, "CNAME"), "EEEVO.GitHub.io");
+      fs.writeFileSync(path.resolve(outputPath, "CNAME"), "zhanghr.info");
 
       await publishGhPages();
 
@@ -106,7 +106,7 @@ module.exports = {
         "--headless",
         "--disable-gpu",
         `--print-to-pdf=${path.resolve(outputPath, "resume.pdf")}`,
-        "http://EEEVO.GitHub.io", // 这里注意改成你的在线简历的网站
+        "http://zhanghr.info", // 这里注意改成你的在线简历的网站
       ]);
 
       // 重新发布到 ghpages
